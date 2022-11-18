@@ -1,0 +1,12 @@
+.nick-root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.image-pick {
+  height: 40px;
+  width: 40px;
+  padding-right: 10px;
+}
