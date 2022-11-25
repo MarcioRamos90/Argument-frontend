@@ -1,7 +1,8 @@
+import { SelectorProps } from './types';
 
 
 
-export function generateMarker (text: string, coords: Array<Number>) {
+export function generateMarker ({text, coords}: SelectorProps) {
     let result = '';
     for (let index = 0; index < text.length; index++) {
       const element = text[index];
