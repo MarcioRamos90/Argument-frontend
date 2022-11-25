@@ -3,18 +3,23 @@ import { SelectorProps } from './types';
 
 
 export function generateMarker ({text, coords}: SelectorProps) {
-    let result = '';
-    for (let index = 0; index < text.length; index++) {
-      const element = text[index];
+  let result = ''
+  let nextCoord = coords.flat()
+  
+  for (let index = 0; index < text.length; index++) {
+    const element = text[index]
 
-      if (index === coords[0]) {
-        result += '<mark>' + element
-      } else if (index === coords[1]) {
-        result += '</mark>' + element
-      } else {
-        result += element
-      }
+    if (index === nextCoord[0]) {
+      result += '<mark>' + text.slice(nextCoord[0], nextCoord[1]) + '</mark>'
+      index = nextCoord[1]
+      result += text[nextCoord[1]] || ''
+      nextCoord = nextCoord.slice(2)
+      continue
     }
-    
-    return result;
+
+    result += element
+
+  }
+  
+  return result
 }

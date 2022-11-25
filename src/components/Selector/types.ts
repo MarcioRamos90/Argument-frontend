@@ -2,5 +2,5 @@
 
 export type SelectorProps = {
   text: string;
-  coords: Array<Number>
+  coords: Array<Array<number>>
 };
