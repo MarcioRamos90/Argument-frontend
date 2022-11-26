@@ -4,6 +4,9 @@ import './index.css';
 import NickName from '../Nickname';
 import Comment from '../Comment';
 
+import Selector from '../Selector'
+
+
 function Argument() {
   const [user, setUser] = useState(1);
 
@@ -91,9 +94,9 @@ function Argument() {
             finibus ex eget eros consequat, ac vulputate leo ultrices.
             </mark>
         </p>
-        <p>
-        <mark>
-            Nulla justo mi, vehicula ac turpis ut, pharetra sagittis tellus.
+        <Selector
+          coords={[[0,300], [400, 510, 'blue']]}
+          text="justo mi, vehicula ac turpis ut, pharetra sagittis tellus.
             Donec id feugiat risus. Vivamus convallis mi magna, a vulputate
             tellus cursus eget. Mauris sed enim pulvinar, efficitur velit sit
             amet, egestas risus. In metus velit, vestibulum sit amet nibh et,
@@ -102,11 +105,9 @@ function Argument() {
             vitae augue eget sapien imperdiet feugiat. Praesent sagittis
             facilisis urna, vel feugiat elit vestibulum a. Fusce sodales
             malesuada neque, et iaculis nibh rhoncus eu. Curabitur et lacus
-            dapibus, dignissim enim viverra, aliquam augue.
-          </mark>
-        </p>
+            dapibus, dignissim enim viverra, aliquam augue."/>
       </section>
-      <hr class="solid"></hr>
+      <hr/>
       <section>
         <div
           onClick={() => {
