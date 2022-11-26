@@ -95,7 +95,7 @@ function Argument() {
             </mark>
         </p>
         <Selector
-          coords={[0,300]}
+          coords={[[0,300, null], [400, 510, 'blue']]}
           text="justo mi, vehicula ac turpis ut, pharetra sagittis tellus.
             Donec id feugiat risus. Vivamus convallis mi magna, a vulputate
             tellus cursus eget. Mauris sed enim pulvinar, efficitur velit sit

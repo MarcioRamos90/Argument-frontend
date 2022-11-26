@@ -1,6 +1,4 @@
-
-
 export type SelectorProps = {
   text: string;
-  coords: Array<Array<number>>
-};
+  coords: [idx1: number, idx2: number, color: string | null][]
+}
