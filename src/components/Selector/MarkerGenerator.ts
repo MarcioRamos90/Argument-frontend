@@ -1,9 +1,8 @@
 import { SelectorProps } from './types';
 
-
 const extractText = (text: string, idx1: number, idx2: number) => text.slice(idx1, idx2)
 
-function generateMarkTag (text: string, color: string | null = null) {
+function generateMarkTag (text: string, color?: string) {
   if (color) {
     return '<mark style="background-color: ' + color + ';">' +
     text + '</mark>'
@@ -19,7 +18,7 @@ export function generateMarker ({ text, coords }: SelectorProps) {
     const element = text[index]
     
     if (coords.length > 0 && index === coords[0][0]) {
-      result += generateMarkTag(extractText(text, coords[0][0], coords[0][1]), coords[0][2] || null)
+      result += generateMarkTag(extractText(text, coords[0][0], coords[0][1]), coords[0][2])
 
       index = coords[0][1]
       result += text[coords[0][1]] || ''
